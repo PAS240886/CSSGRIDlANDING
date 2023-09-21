@@ -1,0 +1,73 @@
+*, ::after, ::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+  font-weight: 400;
+  color: #F5F5F5;
+  line-height: 113%;
+  font-size: 1.6 rem;
+}
+
+.container {
+  display: grid;
+  grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
+  grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.cards {
+  background-color: #F5F5F5;
+  grid-column: center-start/center-end;
+}
+
+.header {
+  background-color: #101D2C;
+  grid-column: col-start/col-end 6;
+}
+
+.features {
+  padding: 15rem 0;
+  background-color: #F5F5F5;
+  grid-column: center-start/center-end;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-gap: 3rem 4rem;
+}
+
+.gamers {
+  background-color: #101D2C;
+  grid-column: col-start 7/full-end;
+}
+
+.banner-img {
+  background-color: #101D2C;
+  grid-column: full-start/col-end 4;
+}
+
+.banner-text {
+  background-color: #101D2C;
+  grid-column: col-end 5/full-end;
+}
+
+.sidebar {
+  background-color: #425844;
+  grid-column: sidebar-start/sidebar-end;
+  grid-row: 1/-1;
+}
+
+.gallery {
+  background-color: #101D2C;
+  grid-column: full-start/full-end;
+}
+
+.footer {
+  background-color: #101D2C;
+  grid-column: full-start/full-end;
+}/*# sourceMappingURL=style.css.map */

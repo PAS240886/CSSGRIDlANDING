@@ -1,0 +1,28 @@
+$color-green-dark: #425844
+$color-green-light: #61A568
+
+$color-blue-dark: #101D2C
+
+$color-gray-dark: #AAAAAA
+$color-gray-light: #F5F5F5
+    
+
+    
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+
+body
+    font-family: "Montserrat", sans-serif
+    font-weight: 400
+    color: $color-gray-light
+    line-height: 113%
+    font-size: 1.6 rem
+.container
+    display: grid
+    grid-template-rows: 80vh min-content 40vw repeat(3, min-content)
+    grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem)[col-end]) [center-end] minmax(6rem, 1fr) [full-end]
