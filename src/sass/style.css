@@ -11,15 +11,47 @@ html {
 body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
-  color: #F5F5F5;
+  color: #AAAAAA;
   line-height: 113%;
   font-size: 1.6 rem;
+  background-color: #F5F5F5;
 }
 
 .container {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+
+.title-1 {
+  font-size: 4.5rem;
+  font-weight: 700;
+  color: White;
+}
+
+.title-2 {
+  font-size: 4rem;
+  font-weight: 700;
+  color: #F5F5F5;
+  line-height: 100%;
+}
+
+.title-3 {
+  font-size: 1.9rem;
+  font-weight: 700;
+  color: #425844;
+}
+.title-3_white {
+  color: #F5F5F5;
+}
+.title-3_green-light {
+  color: #F5F5F5;
+}
+
+.title-3 {
+  font-size: 1.4rem;
+  font-weight: 300;
+  color: #61A568;
 }
 
 .cards {
@@ -37,8 +69,27 @@ body {
   background-color: #F5F5F5;
   grid-column: center-start/center-end;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(auto-fit, minmax(28rem, 1fr));
   grid-gap: 3rem 4rem;
+  align-items: start;
+}
+
+.feature {
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  grid-gap: 1.5rem 2.5rem;
+}
+.feature__icon {
+  width: 4.5rem;
+  height: 4.5rem;
+  grid-row: 1/span 2;
+  transform: translateY(-1rem);
+}
+.feature__text {
+  font-size: 1.6rem;
+  font-weight: 400;
+  line-height: 113%;
+  color: #425844;
 }
 
 .gamers {
@@ -53,7 +104,14 @@ body {
 
 .banner-text {
   background-color: #101D2C;
-  grid-column: col-end 5/full-end;
+  grid-column: col-start 5/full-end;
+  padding: 0 4vw;
+  display: grid;
+  align-content: center;
+  justify-items: start;
+}
+.banner-text__text {
+  margin-bottom: 4rem;
 }
 
 .sidebar {
@@ -70,4 +128,21 @@ body {
 .footer {
   background-color: #101D2C;
   grid-column: full-start/full-end;
+}
+
+.btn {
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #F5F5F5;
+  background-color: #61A568;
+  border: 0;
+  padding: 1.5rem 3rem;
+}
+.btn:hover {
+  background: #425844;
+}
+
+.mg-sm {
+  margin-bottom: 3rem;
 }/*# sourceMappingURL=style.css.map */
