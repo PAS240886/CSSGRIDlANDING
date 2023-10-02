@@ -12,7 +12,6 @@ body {
   font-family: "Montserrat", sans-serif;
   font-weight: 400;
   color: #AAAAAA;
-  line-height: 113%;
   font-size: 1.6 rem;
   background-color: #F5F5F5;
 }
@@ -115,6 +114,31 @@ body {
 .header {
   background-color: #101D2C;
   grid-column: col-start/col-end 6;
+  display: grid;
+  grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr;
+  padding: 5rem 5rem 5rem 6rem;
+  background-image: url(../img/Rectangle_3.png);
+}
+
+.header-line-text {
+  font-size: 1.6rem;
+  font-weight: 700;
+  color: #F5F5F5;
+}
+.header-line-text::before, .header-line-text::after {
+  content: "";
+  background-color: #AAAAAA;
+  display: block;
+  height: 0.1rem;
+}
+
+.header img {
+  height: 2.5rem;
+}
+
+.header-btn {
+  justify-self: start;
+  align-self: start;
 }
 
 .features {
@@ -188,6 +212,29 @@ body {
   background-color: #425844;
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1/-1;
+  padding-top: 3.7rem;
+  display: flex;
+  justify-content: center;
+}
+
+.hamburger {
+  border: none;
+  background-color: #F5F5F5;
+  height: 0.2rem;
+  width: 4.5rem;
+}
+.hamburger::before, .hamburger::after {
+  content: "";
+  background-color: #F5F5F5;
+  height: 0.2rem;
+  width: 4.5rem;
+  display: block;
+}
+.hamburger::before {
+  transform: translateY(-1.5rem);
+}
+.hamburger::after {
+  transform: translateY(1.5rem);
 }
 
 .gallery {
@@ -280,6 +327,40 @@ body {
 .footer {
   background-color: #101D2C;
   grid-column: full-start/full-end;
+  padding: 8rem 3rem;
+  border-top: solid 0.3rem #F5F5F5;
+}
+
+.logo {
+  display: block;
+  margin-bottom: 8rem;
+}
+
+.logo img {
+  display: block;
+  margin: 0 auto;
+}
+
+.nav-list {
+  list-style-type: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  justify-items: center;
+  grid-gap: 3.5rem;
+}
+
+.link:link, .link:visited {
+  font-size: 1.6rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #F5F5F5;
+  text-decoration: none;
+  text-align: center;
+  transition: 0.3 all;
+}
+.link:link:hover, .link:link:active, .link:visited:hover, .link:visited:active {
+  color: #AAAAAA;
+  transform: translateY(-0.3rem);
 }
 
 .btn {
