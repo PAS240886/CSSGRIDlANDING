@@ -9,14 +9,25 @@
      font-size: 1.6rem
      font-weight: 700
      color: $color-gray-light
+     display: grid
+     grid-template-columns: 1fr max-content 1fr
+     grid-column-gap: 2rem
+     align-items: center
+     margin-bottom: 1rem
      &::before, &::after
         content: ""
         background-color: $color-gray-dark
         display: block
         height: .1rem
-
+.images-header
+    display: grid
+    grid-template-columns: repeat(4, 1fr)
+    align-items: center
+    justify-items: center
+    grid-gap: 2rem
 .header img
     height: 2.5rem
+    filter: brightness(70%)
 .header-btn
     justify-self: start
     align-self: start

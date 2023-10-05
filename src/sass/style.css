@@ -7,6 +7,11 @@
 html {
   font-size: 62.5%;
 }
+@media only screen and (max-width: 1170px) {
+  html {
+    font-size: 50%;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -124,6 +129,11 @@ body {
   font-size: 1.6rem;
   font-weight: 700;
   color: #F5F5F5;
+  display: grid;
+  grid-template-columns: 1fr max-content 1fr;
+  grid-column-gap: 2rem;
+  align-items: center;
+  margin-bottom: 1rem;
 }
 .header-line-text::before, .header-line-text::after {
   content: "";
@@ -132,8 +142,17 @@ body {
   height: 0.1rem;
 }
 
+.images-header {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  justify-items: center;
+  grid-gap: 2rem;
+}
+
 .header img {
   height: 2.5rem;
+  filter: brightness(70%);
 }
 
 .header-btn {
@@ -172,6 +191,31 @@ body {
 .gamers {
   background-color: #101D2C;
   grid-column: col-start 7/full-end;
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-gap: 4rem 2rem;
+  align-content: center;
+  justify-content: center;
+}
+
+.gamers-header {
+  grid-column: 1/-1;
+  justify-self: center;
+}
+
+.gamers-img {
+  width: 7rem;
+}
+
+.gamers-text {
+  align-self: center;
+  align-self-font-size: 1.6rem;
+}
+
+.score {
+  font-size: 1.6rem;
+  color: #AAAAAA;
+  font-weight: 300;
 }
 
 .banner-img {
