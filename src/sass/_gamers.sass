@@ -2,10 +2,25 @@
     background-color: $color-blue-dark
     grid-column: col-start 7 / full-end 
     display: grid
-    grid-template-columns: min-content max-content
+    grid-template-columns: max-content
     grid-gap: 4rem 2rem
     align-content: center
     justify-content: center
+    @include respond(tab-port)  
+        grid-column: 1 / -1
+        grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr))
+        justify-items: center
+        padding: 5rem 0
+    @include respond(phone)
+            grid-template-columns: min-content
+            justify-items: start
+
+
+    &_box
+        display: grid
+        grid-template-columns: max-content max-content
+        grid-column-gap: 2rem
+
 .gamers-header
     grid-column: 1 / -1
     justify-self: center

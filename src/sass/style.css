@@ -12,6 +12,11 @@ html {
     font-size: 50%;
   }
 }
+@media only screen and (max-width: 420px) {
+  html {
+    font-size: 40%;
+  }
+}
 
 body {
   font-family: "Montserrat", sans-serif;
@@ -25,6 +30,17 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw repeat(3, min-content);
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+}
+@media only screen and (max-width: 1170px) {
+  .container {
+    grid-template-rows: 6rem 80vh min-content 40vw repeat(3, min-content);
+    grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end];
+  }
+}
+@media only screen and (max-width: 900px) {
+  .container {
+    grid-template-rows: 6rem calc(100vh - 6rem) min-content min-content min-content 50vw repeat(3, min-content);
+  }
 }
 
 .title-1 {
@@ -65,6 +81,11 @@ body {
   grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
   grid-gap: 4rem 6rem;
   padding: 15rem 0;
+}
+@media only screen and (max-width: 420px) {
+  .cards {
+    padding: 5rem 0;
+  }
 }
 
 .card {
@@ -123,6 +144,11 @@ body {
   grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr;
   padding: 5rem 5rem 5rem 6rem;
   background-image: url(../img/Rectangle_3.png);
+}
+@media only screen and (max-width: 900px) {
+  .header {
+    grid-column: full-start/full-end;
+  }
 }
 
 .header-line-text {
@@ -192,10 +218,29 @@ body {
   background-color: #101D2C;
   grid-column: col-start 7/full-end;
   display: grid;
-  grid-template-columns: min-content max-content;
+  grid-template-columns: max-content;
   grid-gap: 4rem 2rem;
   align-content: center;
   justify-content: center;
+}
+@media only screen and (max-width: 900px) {
+  .gamers {
+    grid-column: 1/-1;
+    grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+    justify-items: center;
+    padding: 5rem 0;
+  }
+}
+@media only screen and (max-width: 420px) {
+  .gamers {
+    grid-template-columns: min-content;
+    justify-items: start;
+  }
+}
+.gamers_box {
+  display: grid;
+  grid-template-columns: max-content max-content;
+  grid-column-gap: 2rem;
 }
 
 .gamers-header {
@@ -226,11 +271,21 @@ body {
   grid-template-rows: repeat(24, 1fr);
   background: url(../img/Galary_imgs/background.png) center/cover no-repeat;
 }
+@media only screen and (max-width: 900px) {
+  .banner-img {
+    grid-column: 1/-1;
+  }
+}
 
 .banner-img__img-1 {
   width: 100%;
   grid-column: 3/15;
   grid-row: 10/23;
+}
+@media only screen and (max-width: 900px) {
+  .banner-img__img-1 {
+    grid-column: 2/10;
+  }
 }
 
 .banner-img__img-2 {
@@ -239,14 +294,25 @@ body {
   grid-row: 3/12;
   transform: translateX(3.5rem);
 }
+@media only screen and (max-width: 900px) {
+  .banner-img__img-2 {
+    grid-column: 8/15;
+  }
+}
 
 .banner-text {
   background-color: #101D2C;
   grid-column: col-start 5/full-end;
-  padding: 0 4vw;
+  padding: 4rem;
   display: grid;
   align-content: center;
   justify-items: start;
+}
+@media only screen and (max-width: 900px) {
+  .banner-text {
+    grid-column: 1/-1;
+    grid-row: 5/6;
+  }
 }
 .banner-text__text {
   margin-bottom: 4rem;
@@ -259,6 +325,15 @@ body {
   padding-top: 3.7rem;
   display: flex;
   justify-content: center;
+}
+@media only screen and (max-width: 1170px) {
+  .sidebar {
+    grid-row: 1/2;
+    grid-column: 1/-1;
+    justify-content: end;
+    align-items: center;
+    padding: 0 4rem 0 0;
+  }
 }
 
 .hamburger {

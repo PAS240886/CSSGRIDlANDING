@@ -5,6 +5,10 @@
     grid-template-rows: 1fr min-content minmax(10rem, min-content) 1fr
     padding: 5rem 5rem 5rem 6rem
     background-image: url(../img/Rectangle_3.png)
+    @include respond(tab-port)
+        grid-column: full-start / full-end
+
+
 .header-line-text
      font-size: 1.6rem
      font-weight: 700
